@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Portfolio Website Design | Codehal</title>
+
+  <!-- swiper css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- box icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+
+  <!-- header design -->
+  <header class="header">
+    <a href="#" class="logo">Portfolio.</a>
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="toggle">
+      <div class="bx bx-moon toggle-icon" id="darkMode-icon"></div>
+    </div>
+
+    <div class="bx bx-menu" id="menu-icon"></div>
+  </header>
+
+  <!-- home section design -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3>Hello, I am</h3>
+      <h1>Igor Oliveira</h1>
+      <p>Software Engineer | TOTVs Fluig Senior | Enterprise Solutions (HTML, CSS, JavaScript, Java & SQL)</p>
+
+      <div class="social-media">
+        <a href="https://www.facebook.com/igor.vieira.777701" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-facebook" title="facebook"></i>
+        </a>
+        <a href="https://x.com/kinnitchi" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-twitter" title="twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kinnitchi/" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-instagram-alt" title="instagram"></i>
+        </a>
+        <a href="https://github.com/Kinnitchi" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-linkedin" title="linkedin"></i>
+        </a>
+      </div>
+
+      <a href="src/docs/Curriculum.pdf" target="_blank" class="btn">Download CV</a>
+    </div>
+
+    <div class="profession-container">
+      <div class="profession-box">
+        <div class="profession">
+          <i class="bx bx-code-alt"></i>
+          <h3>Fluig Developer</h3>
+        </div>
+        <div class="profession">
+          <i class="bx bx-joystick"></i>
+          <h3>Gamer</h3>
+        </div>
+        <div class="profession">
+          <i class="bx bxl-twitch"></i>
+          <h3>Streamer</h3>
+        </div>
+
+        <div class="profession">
+          <i class="bx bx-hard-hat"></i>
+          <h3>In progress</h3>
+        </div>
+
+        <div class="circle"></div>
+      </div>
+
+      <div class="overlay"></div>
+    </div>
+
+    <div class="home-img">
+      <img src="src/images/home.png" alt="my picture" loading="lazy">
+    </div>
+  </section>
+
+  <!-- about section design -->
+  <section class="about" id="about">
+    <div class="triangle-container">
+      <img src="src/images/home.png" alt="Pessoa" class="person-image" loading="lazy">
+    </div>
+
+    <div class="about-content">
+      <h2 class="heading">About <span>Me</span></h2>
+      <p>
+        Since 2020, I've been working as a Front-End Developer at TOTVS FLUIG, specializing in developing and
+        maintaining applications on the FLUIG platform. My expertise includes creating and customizing dynamic forms and
+        datasets, as well as implementing responsive interfaces using HTML, CSS, JavaScript, jQuery, and Bootstrap.
+        Additionally, I have proficiency in Java and BPMN 2.0, and I excel at integrating forms with various ERP systems
+        such as PROTHEUS, RM, and DATASUL.</p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+  </section>
+
+  <!-- services section design -->
+  <section class="services" id="services">
+    <h2 class="heading">My <span>Services</span></h2>
+
+    <div class="services-container">
+      <div class="services-box">
+        <i class="bx bx-code-alt"></i>
+        <h3>Fluig Development</h3>
+        <p>
+          Developer forms and datasets, as well as implementing responsive interfaces using HTML, CSS, JavaScript,
+          jQuery, and Bootstrap. Additionally, I have proficiency in Java and BPMN 2.0, and I excel at integrating
+          forms!
+        </p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="services-box">
+        <i class="bx bx-joystick"></i>
+        <h3>Gamer</h3>
+        <p>
+          I am a passionate gamer who enjoys exploring new worlds and challenges in the gaming universe. I love to share
+          my experiences and connect with fellow gamers through streaming and social media.
+        </p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="services-box">
+        <i class="bx bxl-twitch"></i>
+        <h3>Streamer</h3>
+        <p>
+          I am a passionate streamer who enjoys sharing my gaming experiences and connecting with my audience in
+          real-time.
+          I love to create engaging content and build a community around my favorite games.
+        </p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- portfolio section design -->
+  <section class="portfolio" id="portfolio">
+    <h2 class="heading">Latest <span>Project</span></h2>
+
+    <div class="portfolio-container">
+      <div class="portfolio-box">
+        <img src="src/images/portfolio1.jpg" alt="">
+
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
+          <a href="#" title="project"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img src="src/images/portfolio2.jpg" alt="">
+
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
+          <a href="#" title="project"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img src="src/images/portfolio3.jpg" alt="">
+
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
+          <a href="#" title="project"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img src="src/images/portfolio4.jpg" alt="">
+
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
+          <a href="#" title="project"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img src="src/images/portfolio5.jpg" alt="">
+
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
+          <a href="#" title="project"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img src="src/images/portfolio6.jpg" alt="">
+
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
+          <a href="#" title="project"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- testimonial design -->
+  <div class="testimonial-container">
+    <h2 class="heading">Valuable <span>Testimonial</span></h2>
+
+    <div class="testimonial-wrapper">
+      <div class="testimonial-box mySwiper">
+        <div class="testimonial-content swiper-wrapper">
+          <div class="testimonial-slide swiper-slide">
+            <img src="src/images/testimonial1.jpg" alt="">
+            <h3>Jackson Levi</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dignissimos aliquid
+              iure delectus corrupti impedit, beatae aperiam ad iusto nostrum possimus cum pariatur harum
+              assumenda suscipit a, qui, tempora maxime nulla facere quo ipsum tempore. Atque libero
+              provident ad aut officia pariatur voluptate quaerat delectus nesciunt, sequi eligendi
+              aperiam fugit unde nihil, iste similique illum. Dignissimos enim officia consequuntur
+              dolores.</p>
+          </div>
+          <div class="testimonial-slide swiper-slide">
+            <img src="src/images/testimonial2.jpg" alt="">
+            <h3>Flora Ocean</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dignissimos aliquid
+              iure delectus corrupti impedit, beatae aperiam ad iusto nostrum possimus cum pariatur harum
+              assumenda suscipit a, qui, tempora maxime nulla facere quo ipsum tempore. Atque libero
+              provident ad aut officia pariatur voluptate quaerat delectus nesciunt, sequi eligendi
+              aperiam fugit unde nihil, iste similique illum. Dignissimos enim officia consequuntur
+              dolores.</p>
+          </div>
+          <div class="testimonial-slide swiper-slide">
+            <img src="src/images/testimonial3.jpg" alt="">
+            <h3>Julian Grayson</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dignissimos aliquid
+              iure delectus corrupti impedit, beatae aperiam ad iusto nostrum possimus cum pariatur harum
+              assumenda suscipit a, qui, tempora maxime nulla facere quo ipsum tempore. Atque libero
+              provident ad aut officia pariatur voluptate quaerat delectus nesciunt, sequi eligendi
+              aperiam fugit unde nihil, iste similique illum. Dignissimos enim officia consequuntur
+              dolores.</p>
+          </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- contact section design -->
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+
+    <form action="#">
+      <div class="input-box">
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email Address">
+      </div>
+      <div class="input-box">
+        <input type="number" placeholder="Mobile Number">
+        <input type="text" placeholder="Email Subject">
+      </div>
+      <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+      <input type="submit" value="Send Message" class="btn">
+    </form>
+  </section>
+
+  <!-- footer design -->
+  <footer class="footer">
+    <div class="footer-text">
+      <p>Copyright &copy; 2023 by Codehal | All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-iconTop">
+      <a href="#home"><i class="bx bx-up-arrow-alt" title="up to home"></i></a>
+    </div>
+  </footer>
+
+
+  <!-- scroll reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- custom js -->
+  <script src="/src/scripts/script.js"></script>
+</body>
+
+</html>
