@@ -5,21 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Portfolio Website Design | Codehal</title>
+  <title>Responsive Portfolio Website Design</title>
 
-  <!-- swiper css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-  <!-- box icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
-  <!-- custom css -->
-  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/assets/css/style.css">
 </head>
 
 <body>
-
-  <!-- header design -->
   <header class="header">
     <a href="#" class="logo">Portfolio.</a>
     <nav class="navbar">
@@ -37,12 +31,13 @@
     <div class="bx bx-menu" id="menu-icon"></div>
   </header>
 
-  <!-- home section design -->
   <section class="home" id="home">
     <div class="home-content">
       <h3>Hello, I am</h3>
       <h1>Igor Oliveira</h1>
-      <p>Software Engineer | TOTVs Fluig Senior | Enterprise Solutions (HTML, CSS, JavaScript, Java & SQL)</p>
+      <p>Software Engineer | TOTVs Fluig Senior | Enterprise Solutions (
+        <strong>HTML, CSS, JavaScript, Java & SQL</strong>)
+      </p>
 
       <div class="social-media">
         <a href="https://www.facebook.com/igor.vieira.777701" target="_blank" rel="noopener noreferrer">
@@ -51,15 +46,19 @@
         <a href="https://x.com/kinnitchi" target="_blank" rel="noopener noreferrer">
           <i class="bx bxl-twitter" title="twitter"></i>
         </a>
-        <a href="https://www.linkedin.com/in/kinnitchi/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/kinnitchi/" target="_blank" rel="noopener noreferrer">
           <i class="bx bxl-instagram-alt" title="instagram"></i>
         </a>
-        <a href="https://github.com/Kinnitchi" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/kinnitchi/" target="_blank" rel="noopener noreferrer">
           <i class="bx bxl-linkedin" title="linkedin"></i>
         </a>
+        <a href="https://www.linkedin.com/in/kinnitchi/" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-github" title="github"></i>
+        </a>
+
       </div>
 
-      <a href="src/docs/Curriculum.pdf" target="_blank" class="btn">Download CV</a>
+      <a href="src/assets/docs/Curriculum.pdf" target="_blank" class="btn">Download CV</a>
     </div>
 
     <div class="profession-container">
@@ -89,14 +88,13 @@
     </div>
 
     <div class="home-img">
-      <img src="src/images/home.png" alt="my picture" loading="lazy">
+      <img src="src/assets/images/profile/profile.png" alt="my picture" loading="lazy">
     </div>
   </section>
 
-  <!-- about section design -->
   <section class="about" id="about">
     <div class="triangle-container">
-      <img src="src/images/home.png" alt="Pessoa" class="person-image" loading="lazy">
+      <img src="src/assets/images/profile/profile.png" alt="Pessoa" class="person-image" loading="lazy">
     </div>
 
     <div class="about-content">
@@ -111,7 +109,6 @@
     </div>
   </section>
 
-  <!-- services section design -->
   <section class="services" id="services">
     <h2 class="heading">My <span>Services</span></h2>
 
@@ -148,97 +145,40 @@
     </div>
   </section>
 
-  <!-- portfolio section design -->
   <section class="portfolio" id="portfolio">
     <h2 class="heading">Latest <span>Project</span></h2>
 
     <div class="portfolio-container">
-      <div class="portfolio-box">
-        <img src="src/images/portfolio1.jpg" alt="">
 
+
+      <div class="portfolio-box">
+        <img src="src/assets/images/projects/vscode_theme.png" alt="vscode theme">
         <div class="portfolio-layer">
-          <h4>Web Design</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-          <a href="#" title="project"><i class="bx bx-link-external"></i></a>
+          <h4>VS Code Theme</h4>.
+          <p>Dark neon theme inspired by Dracula and Legendary Theme</p>
+          <a href="https://marketplace.visualstudio.com/items?itemName=Kinnitchi.kinnitchi-theme&ssr=false#review-details"
+            target="_blank" rel="noopener noreferrer" title="theme vscode"><i class="bx bx-link-external"></i></a>
         </div>
       </div>
-      <div class="portfolio-box">
-        <img src="src/images/portfolio2.jpg" alt="">
 
-        <div class="portfolio-layer">
-          <h4>Web Design</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-          <a href="#" title="project"><i class="bx bx-link-external"></i></a>
-        </div>
-      </div>
-      <div class="portfolio-box">
-        <img src="src/images/portfolio3.jpg" alt="">
+      <div class="portfolio-box" style="display: flex; align-items: center;
+        justify-content: center; height: 100%;">
+        <h1>In progress</h1>
 
-        <div class="portfolio-layer">
-          <h4>Web Design</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-          <a href="#" title="project"><i class="bx bx-link-external"></i></a>
-        </div>
       </div>
-      <div class="portfolio-box">
-        <img src="src/images/portfolio4.jpg" alt="">
 
-        <div class="portfolio-layer">
-          <h4>Web Design</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-          <a href="#" title="project"><i class="bx bx-link-external"></i></a>
-        </div>
-      </div>
-      <div class="portfolio-box">
-        <img src="src/images/portfolio5.jpg" alt="">
-
-        <div class="portfolio-layer">
-          <h4>Web Design</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-          <a href="#" title="project"><i class="bx bx-link-external"></i></a>
-        </div>
-      </div>
-      <div class="portfolio-box">
-        <img src="src/images/portfolio6.jpg" alt="">
-
-        <div class="portfolio-layer">
-          <h4>Web Design</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-          <a href="#" title="project"><i class="bx bx-link-external"></i></a>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- testimonial design -->
   <div class="testimonial-container">
     <h2 class="heading">Valuable <span>Testimonial</span></h2>
 
     <div class="testimonial-wrapper">
       <div class="testimonial-box mySwiper">
         <div class="testimonial-content swiper-wrapper">
-          <div class="testimonial-slide swiper-slide">
-            <img src="src/images/testimonial1.jpg" alt="">
-            <h3>Jackson Levi</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dignissimos aliquid
-              iure delectus corrupti impedit, beatae aperiam ad iusto nostrum possimus cum pariatur harum
-              assumenda suscipit a, qui, tempora maxime nulla facere quo ipsum tempore. Atque libero
-              provident ad aut officia pariatur voluptate quaerat delectus nesciunt, sequi eligendi
-              aperiam fugit unde nihil, iste similique illum. Dignissimos enim officia consequuntur
-              dolores.</p>
-          </div>
-          <div class="testimonial-slide swiper-slide">
-            <img src="src/images/testimonial2.jpg" alt="">
-            <h3>Flora Ocean</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dignissimos aliquid
-              iure delectus corrupti impedit, beatae aperiam ad iusto nostrum possimus cum pariatur harum
-              assumenda suscipit a, qui, tempora maxime nulla facere quo ipsum tempore. Atque libero
-              provident ad aut officia pariatur voluptate quaerat delectus nesciunt, sequi eligendi
-              aperiam fugit unde nihil, iste similique illum. Dignissimos enim officia consequuntur
-              dolores.</p>
-          </div>
-          <div class="testimonial-slide swiper-slide">
-            <img src="src/images/testimonial3.jpg" alt="">
+
+          <!-- <div class="testimonial-slide swiper-slide">
+            <img src="src/assets/images/testimonial3.jpg" alt="">
             <h3>Julian Grayson</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dignissimos aliquid
               iure delectus corrupti impedit, beatae aperiam ad iusto nostrum possimus cum pariatur harum
@@ -246,7 +186,7 @@
               provident ad aut officia pariatur voluptate quaerat delectus nesciunt, sequi eligendi
               aperiam fugit unde nihil, iste similique illum. Dignissimos enim officia consequuntur
               dolores.</p>
-          </div>
+          </div> -->
         </div>
 
         <div class="swiper-button-next"></div>
@@ -256,7 +196,6 @@
     </div>
   </div>
 
-  <!-- contact section design -->
   <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
 
@@ -274,10 +213,9 @@
     </form>
   </section>
 
-  <!-- footer design -->
   <footer class="footer">
     <div class="footer-text">
-      <p>Copyright &copy; 2023 by Codehal | All Rights Reserved.</p>
+      <p></p>
     </div>
 
     <div class="footer-iconTop">
@@ -285,14 +223,9 @@
     </div>
   </footer>
 
-
-  <!-- scroll reveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
-  <!-- swiper js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-  <!-- custom js -->
-  <script src="/src/scripts/script.js"></script>
+  <script src="/src/assets/scripts/script.js"></script>
 </body>
 
 </html>

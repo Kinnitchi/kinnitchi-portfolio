@@ -14,20 +14,21 @@
 :root {
   --bg-color: #fdfdfd;
   --text-color: #333;
-  --main-color: #754ef9;
+  --main-color: #0559f5;
   --white-color: #fdfdfd;
   --shadow-color: rgba(0, 0, 0, .2);
+}
+
+.dark-mode {
+  --bg-color: #313131;
+  --text-color: #fdfdfd;
+  --main-color: #003486;
+  --shadow-color: rgba(0, 0, 0, .7);
 }
 
 *::selection {
   background: var(--main-color);
   color: var(--bg-color);
-}
-
-.dark-mode {
-  --bg-color: #0b061f;
-  --text-color: #fdfdfd;
-  --shadow-color: rgba(0, 0, 0, .7);
 }
 
 html {
@@ -79,6 +80,7 @@ body {
   animation-delay: calc(.2s * var(--i));
 }
 
+
 /* Atribuindo valores distintos para cada link */
 .navbar a:nth-child(1) {
   --i: 12;
@@ -112,15 +114,31 @@ body {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -6px;
+  bottom: 0px;
   width: 100%;
-  height: .2rem;
+  height: .15rem;
   background: var(--white-color);
 }
 
 .header.sticky .navbar a::before {
   background: var(--main-color);
   opacity: .7;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: var(--text-color);
+  height: .15rem;
+  transform: scaleX(0);
+  transition: transform .3s ease;
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1);
 }
 
 .toggle {
@@ -227,6 +245,10 @@ section {
 
 .social-media a:nth-child(4) {
   --i: 10;
+}
+
+.social-media a:nth-child(5) {
+  --i: 11;
 }
 
 
@@ -695,7 +717,7 @@ span {
   border-radius: .8rem;
   border: .2rem solid var(--main-color);
   outline: .2rem solid transparent;
-  transition: .5s ease;
+  transition: .3s ease;
 }
 
 .footer-iconTop a:hover {
@@ -707,9 +729,8 @@ span {
   color: #333;
 }
 
-
 /* BREAKPOINTS */
-@media (width >=1200px) {
+@media (max-width: 1200px) {
   html {
     font-size: 55%;
   }
@@ -727,7 +748,7 @@ span {
   }
 }
 
-@media (width >=1100px) {
+@media (max-width: 1100px) {
   .home .profession-container .profession-box {
     right: -15%;
   }
@@ -737,7 +758,7 @@ span {
   }
 }
 
-@media (width >=1024px) {
+@media (max-width: 1024px) {
   .header {
     padding: 2rem 3%;
   }
@@ -759,7 +780,7 @@ span {
   }
 }
 
-@media (width >=991px) {
+@media (max-width: 991px) {
 
   .navbar a:nth-child(1) {
     color: var(--main-color);
@@ -771,7 +792,7 @@ span {
   }
 
   .home .home-content {
-    width: 50rem;
+    max-width: 50rem;
   }
 
   .home .profession-container .profession-box {
@@ -791,7 +812,7 @@ span {
   }
 }
 
-@media (width >=896px) {
+@media (max-width: 896px) {
   .navbar a:nth-child(2) {
     color: var(--main-color);
   }
@@ -805,19 +826,19 @@ span {
   }
 }
 
-@media (width >=879px) {
+@media (max-width: 879px) {
   .portfolio .portfolio-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (width >=780px) {
+@media (max-width: 780px) {
   .navbar a:nth-child(2) {
     color: var(--white-color);
   }
 }
 
-@media (width >=768px) {
+@media (max-width: 768px) {
   #menu-icon {
     display: block;
   }
@@ -967,13 +988,13 @@ span {
   }
 }
 
-@media (width>=580px) {
+@media (max-width: 580px) {
   .portfolio .portfolio-container {
     grid-template-columns: 1fr;
   }
 }
 
-@media (width>=450px) {
+@media (max-width: 450px) {
   html {
     font-size: 50%;
   }
@@ -1016,13 +1037,13 @@ span {
   }
 }
 
-@media (width>=365px) {
+@media (max-width: 365px) {
   .about-img img {
     width: 90vw;
   }
 }
 
-@media (width>=315px) {
+@media (max-width: 315px) {
   .home-content h1 {
     font-size: 4.5rem;
   }
