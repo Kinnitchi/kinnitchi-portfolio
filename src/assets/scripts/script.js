@@ -3,18 +3,38 @@ class Menu {
     this.menuIcon = document.querySelector(menuIconSelector);
     this.navbar = document.querySelector(navbarSelector);
     this.init();
-    this.footer();
+
+
   }
   init() {
     this.menuIcon.onclick = () => {
       this.menuIcon.classList.toggle('bx-x');
       this.navbar.classList.toggle('active');
+      this.addEventListener();
+      this.footer();
     };
   }
 
   closeMenu() {
     this.menuIcon.classList.remove('bx-x');
     this.navbar.classList.remove('active');
+  }
+
+  addEventListener() {
+    document.querySelector('.btn-send-message').onclick = () => {
+      return alert('Erro ao enviar a mensagem. Por favor, tente novamente mais tarde.');
+
+      const name = document.querySelector('#name').value;
+      const email = document.querySelector('#email').value;
+      const message = document.querySelector('#message').value;
+
+      if (name && email && message) {
+        alert(`Mensagem enviada com sucesso!\n\nNome: ${name}\nEmail: ${email}\nMensagem: ${message}`);
+        this.closeMenu();
+      } else {
+        alert('Por favor, preencha todos os campos.');
+      }
+    }
   }
 
   footer() {
