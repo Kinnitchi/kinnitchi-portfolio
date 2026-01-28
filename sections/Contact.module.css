@@ -1,0 +1,218 @@
+.contact {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-4xl) 0 0;
+  position: relative;
+  overflow: hidden;
+  color: #0f172a;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  background: radial-gradient(ellipse at center top, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: var(--font-weight-extrabold);
+  color: white;
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.subtitle {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-2xl);
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.3;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.text {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  text-align: left;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--gradient-accent);
+  transform: scaleY(0);
+  transition: transform var(--transition-bounce);
+  transform-origin: bottom;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.link:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-6px);
+  box-shadow:
+    var(--shadow-xl),
+    0 0 0 1px rgba(59, 130, 246, 0.1),
+    0 20px 40px rgba(59, 130, 246, 0.15);
+  background: linear-gradient(135deg, var(--color-card-bg) 0%, rgba(59, 130, 246, 0.03) 100%);
+}
+
+.link:hover::before {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.link:hover::after {
+  left: 100%;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  padding: var(--spacing-sm);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  color: white;
+  flex-shrink: 0;
+
+  transition: all var(--transition-bounce);
+  position: relative;
+}
+
+.link:hover .icon {
+  background: var(--color-accent-light);
+  transform: scale(1.15) rotate(5deg);
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.linkLabel {
+  font-size: 0.875rem;
+  color: var(--color-text-tertiary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.linkValue {
+  font-size: 1.0625rem;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+  transition: all var(--transition-fast);
+}
+
+.link:hover .linkValue {
+  color: var(--color-accent);
+  transform: translateX(4px);
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-2xl);
+}
+
+.footer {
+  margin-top: auto;
+  width: 100%;
+  padding-top: var(--spacing-2xl);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.footerContent {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+  padding: var(--spacing-xl) 0;
+}
+
+.footerContent p {
+  margin-bottom: var(--spacing-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.footerMeta {
+  font-size: 0.875rem;
+  color: var(--color-text-tertiary);
+}
+
+@media (max-width: 768px) {
+  .link {
+    padding: var(--spacing-lg);
+    gap: var(--spacing-md);
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .linkValue {
+    font-size: 1rem;
+  }
+}

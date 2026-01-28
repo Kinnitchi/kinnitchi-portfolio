@@ -1,0 +1,110 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);
+  background: transparent;
+  transition: all var(--transition-normal);
+  padding: var(--spacing-lg) 0;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+}
+
+.menu {
+  display: flex;
+  gap: var(--spacing-xs);
+  align-items: center;
+  background: rgba(255, 255, 255);
+  padding: 6px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.06),
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  position: relative;
+}
+
+.menu a {
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  position: relative;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.menu a::after {
+  display: none;
+}
+
+.menu a:hover:not(.active) {
+  color: var(--color-text-primary);
+
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+  background: rgba(59, 130, 246);
+  transform: translateY(-1px);
+}
+
+.menu a.active {
+  color: white;
+  transition: color var(--transition-fast);
+}
+
+.menu a.active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+  box-shadow:
+    0 4px 12px rgba(59, 130, 246, 0.4),
+    0 2px 4px rgba(59, 130, 246, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  z-index: -1;
+  transition: all var(--transition-bounce);
+  animation: slideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes slideIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar.scrolled {
+    background: rgba(10, 15, 30, 0.8);
+  }
+}

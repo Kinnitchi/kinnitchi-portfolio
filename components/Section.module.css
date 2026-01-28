@@ -1,0 +1,12 @@
+.section {
+  padding: var(--section-padding) 0;
+  position: relative;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-3xl) 0;
+  }
+}
