@@ -1,5 +1,3 @@
-import { em } from "framer-motion/client";
-
 export interface Skill {
   name: string;
   category: "frontend" | "backend" | "tools" | "platform";
@@ -40,40 +38,41 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    company: "2Be Consulting",
+    company: "Cruzeiro do Sul",
+    role: "Front-End Developer",
+    period: "2024 - Presente",
+    description: [
+      "Desenvolvimento de soluções corporativas enterprise utilizando plataforma Fluig (TOTVS)",
+      "Criação de interfaces web para gestão acadêmica e administrativa",
+      "Suporte técnico e implementação de melhorias em sistemas legados",
+      "Participação em projetos de modernização da infraestrutura web",
+    ],
+    technologies: ["Fluig", "JavaScript", "jQuery", "BPMN", "API REST", "SQL"],
+  },
+  {
+    company: "Acqio",
     role: "Software Engineer",
-    period: "2022 - Presente",
+    period: "2022 - 2024",
+    description: [
+      "Desenvolvimento de soluções corporativas enterprise utilizando plataforma Fluig (TOTVS)",
+      "Desenvolvimento de interfaces modernas e responsivas para aplicações web",
+      "Implementação de componentes reutilizáveis seguindo padrões de design system",
+      "Otimização de performance e acessibilidade em aplicações React",
+      "Colaboração direta com equipe de UX/UI para implementação pixel-perfect",
+    ],
+    technologies: ["Fluig", "JavaScript", "Java", "PHP", "jQuery", "SQL", "Git", "Azure DevOps"],
+  },
+  {
+    company: "2Be Consulting",
+    role: "Desenvolvedor Júnior",
+    period: "2021 - 2022",
     description: [
       "Desenvolvimento de soluções corporativas enterprise utilizando plataforma Fluig (TOTVS)",
       "Implementação de processos BPMN 2.0 complexos para automação de fluxos de negócio",
       "Criação de portais corporativos personalizados com foco em experiência do usuário",
       "Integração de sistemas via API REST com arquitetura escalável",
     ],
-    technologies: ["Fluig", "JavaScript", "Java", "BPMN", "API REST", "SQL"],
-  },
-  {
-    company: "Acqio",
-    role: "Front-End Developer",
-    period: "2021 - 2022",
-    description: [
-      "Desenvolvimento de interfaces modernas e responsivas para aplicações web",
-      "Implementação de componentes reutilizáveis seguindo padrões de design system",
-      "Otimização de performance e acessibilidade em aplicações React",
-      "Colaboração direta com equipe de UX/UI para implementação pixel-perfect",
-    ],
-    technologies: ["React", "JavaScript", "CSS", "Bootstrap", "Git"],
-  },
-  {
-    company: "Universidade Cruzeiro do Sul",
-    role: "Desenvolvedor Júnior",
-    period: "2020 - 2021",
-    description: [
-      "Desenvolvimento e manutenção de sistemas internos da universidade",
-      "Criação de interfaces web para gestão acadêmica e administrativa",
-      "Suporte técnico e implementação de melhorias em sistemas legados",
-      "Participação em projetos de modernização da infraestrutura web",
-    ],
-    technologies: ["HTML", "CSS", "JavaScript", "jQuery", "SQL"],
+    technologies: ["Fluig", "JavaScript", "jQuery", "BPMN", "API REST", "SQL"],
   },
 ];
 
@@ -81,15 +80,14 @@ export interface Project {
   title: string;
   description: string;
   technologies: string[];
-  category: string;
+  category: "Enterprise" | "Process Automation" | "Document Management" | "Data Visualization";
   highlights: string[];
 }
 
 export const projects: Project[] = [
   {
     title: "Portal Corporativo Integrado",
-    description:
-      "Portal corporativo completo desenvolvido em Fluig com integração de múltiplos sistemas via API REST",
+    description: "Portal corporativo completo desenvolvido em Fluig com integração de múltiplos sistemas via API REST",
     technologies: ["Fluig", "JavaScript", "Java", "API REST", "SQL"],
     category: "Enterprise",
     highlights: [
@@ -100,8 +98,7 @@ export const projects: Project[] = [
   },
   {
     title: "Sistema de Gestão de Processos BPMN",
-    description:
-      "Solução completa para automação de processos empresariais utilizando BPMN 2.0",
+    description: "Solução completa para automação de processos empresariais utilizando BPMN 2.0",
     technologies: ["Fluig", "BPMN 2.0", "JavaScript", "Java"],
     category: "Process Automation",
     highlights: [
@@ -112,8 +109,7 @@ export const projects: Project[] = [
   },
   {
     title: "Sistema de Aprovação de Documentos",
-    description:
-      "Plataforma para gerenciamento e aprovação de documentos corporativos com versionamento",
+    description: "Plataforma para gerenciamento e aprovação de documentos corporativos com versionamento",
     technologies: ["Fluig", "JavaScript", "React", "API REST"],
     category: "Document Management",
     highlights: [
@@ -124,8 +120,7 @@ export const projects: Project[] = [
   },
   {
     title: "Dashboard Analytics Corporativo",
-    description:
-      "Dashboard moderno para visualização de KPIs e métricas corporativas em tempo real",
+    description: "Dashboard moderno para visualização de KPIs e métricas corporativas em tempo real",
     technologies: ["React", "Next.js", "TypeScript", "API REST"],
     category: "Data Visualization",
     highlights: [
