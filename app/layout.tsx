@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "@/styles/globals.css";
 
 const inter = Inter({
@@ -12,7 +13,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://igoroliveira.dev"),
   title: {
-    default: "Igor Oliveira | Software Engineer | Front-End Specialist",
+    default: "Igor Oliveira | Software Engineer",
     template: "%s | Igor Oliveira",
   },
   description:
@@ -42,8 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Igor Oliveira | Software Engineer",
-    description:
-      "Software Engineer especializado em Front-End e Fluig (TOTVS).",
+    description: "Software Engineer especializado em Front-End e Fluig (TOTVS).",
   },
   robots: {
     index: true,
@@ -58,16 +58,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className={inter.variable}>
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
