@@ -15,7 +15,7 @@ export default function Skills() {
     <Section id="skills" className={styles.skills}>
       <Container>
         <div className={styles.content}>
-          <h1 className={styles.title}> Skills & Stack</h1>
+          <h2 className={styles.title}> Skills & Stack</h2>
           <p className={styles.subtitle}>Tecnologias e ferramentas que domino</p>
           <div className={styles.grid}>
             <div className={styles.category}>
