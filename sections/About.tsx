@@ -7,9 +7,9 @@ export default function About() {
     <Section id="sobre" className={styles.about}>
       <Container>
         <div className={styles.content}>
-          <h1 className={styles.title}>Sobre mim</h1>
+          <h2 className={styles.title}>Sobre mim</h2>
 
-          <div className={styles.content}>
+          <div className={styles.body}>
             <div className={styles.text}>
               <p className={styles.paragraph}>
                 Sou <strong>Software Engineer</strong> com expertise em desenvolvimento <strong>Front-End</strong> e

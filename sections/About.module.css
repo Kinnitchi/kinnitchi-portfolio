@@ -29,6 +29,12 @@
   z-index: 1;
 }
 
+/* Inner layout wrapper for text + stats */
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
 .title {
   text-align: center;
   font-size: clamp(3rem, 8vw, 5rem);
