@@ -176,31 +176,6 @@
   margin-top: var(--spacing-2xl);
 }
 
-.footer {
-  margin-top: auto;
-  width: 100%;
-  padding-top: var(--spacing-2xl);
-  border-top: 1px solid var(--color-border);
-  background: var(--color-surface);
-}
-
-.footerContent {
-  text-align: center;
-  color: var(--color-text-secondary);
-  font-size: 0.9375rem;
-  padding: var(--spacing-xl) 0;
-}
-
-.footerContent p {
-  margin-bottom: var(--spacing-xs);
-  font-weight: var(--font-weight-medium);
-}
-
-.footerMeta {
-  font-size: 0.875rem;
-  color: var(--color-text-tertiary);
-}
-
 @media (max-width: 768px) {
   .link {
     padding: var(--spacing-lg);
