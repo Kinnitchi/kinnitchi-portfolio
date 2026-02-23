@@ -8,11 +8,11 @@ export default function Experience() {
     <Section id="experiencia" className={styles.experience}>
       <Container>
         <div className={styles.content}>
-          <h1 className={styles.title}>Experiência</h1>
+          <h2 className={styles.title}>Experiência</h2>
           <p className={styles.subtitle}>Minha trajetória profissional</p>
           <div className={styles.timeline}>
-            {experiences.map((exp, index) => (
-              <div key={index} className={styles.item}>
+            {experiences.map((exp) => (
+              <div key={exp.company} className={styles.item}>
                 <div className={styles.marker}></div>
                 <div className={styles["content-experience"]}>
                   <div className={styles.header}>
