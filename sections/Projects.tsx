@@ -7,11 +7,11 @@ export default function Projects() {
   return (
     <Section id="projetos" className={styles.project}>
       <Container>
-        <h1 className={styles.title}>Projetos</h1>
+        <h2 className={styles.title}>Projetos</h2>
         <p className={styles.subtitle}>Soluções corporativas que desenvolvi</p>
         <div className={styles.grid}>
-          {projects.map((project, index) => (
-            <div key={index} className={styles.card}>
+          {projects.map((project) => (
+            <div key={project.title} className={styles.card}>
               <div className={styles.category}>{project.category}</div>
               <h3 className={styles["title-card"]}>{project.title}</h3>
               <p className={styles.description}>{project.description}</p>
