@@ -1,52 +1,94 @@
-import Section from "@/components/Section";
-import Container from "@/components/Container";
-import styles from "./About.module.css";
+import { personal, stats } from "@/data/portfolio";
+import AnimatedSection from "@/components/AnimatedSection";
+import { FiMapPin, FiMail } from "react-icons/fi";
 
 export default function About() {
   return (
-    <Section id="sobre" className={styles.about}>
-      <Container>
-        <div className={styles.content}>
-          <h2 className={styles.title}>Sobre mim</h2>
+    <section id="about" className="py-28 px-6" aria-label="Sobre mim">
+      <div className="max-w-6xl mx-auto">
+        {/* Section header */}
+        <AnimatedSection className="mb-16">
+          <p className="text-accent text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+            Sobre mim
+          </p>
+          <h2 className="text-4xl sm:text-5xl font-black text-foreground tracking-tight">
+            Quem sou eu
+          </h2>
+        </AnimatedSection>
 
-          <div className={styles.body}>
-            <div className={styles.text}>
-              <p className={styles.paragraph}>
-                Sou <strong>Software Engineer</strong> com expertise em desenvolvimento <strong>Front-End</strong> e
-                especialização na plataforma <strong>Fluig (TOTVS)</strong>. Desde 2020, atuo no desenvolvimento de
-                soluções corporativas enterprise, transformando requisitos complexos em sistemas escaláveis e de alta
-                performance.
-              </p>
-              <p className={styles.paragraph}>
-                Minha experiência abrange desde a <strong>arquitetura de aplicações React/Next.js</strong> até a
-                implementação de <strong>processos BPMN 2.0</strong> complexos, sempre com foco em clean code,
-                performance e experiência do usuário. Trabalho em ambientes ágeis, colaborando diretamente com
-                stakeholders técnicos e de negócio.
-              </p>
-              <p className={styles.paragraph}>
-                Tenho um perfil <strong>solution-oriented</strong>, buscando sempre equilibrar excelência técnica com
-                entrega de valor ao negócio. Minha stack principal envolve tecnologias modernas do ecossistema
-                JavaScript/TypeScript, com forte domínio em integrações via API REST e desenvolvimento de portais
-                corporativos.
-              </p>
+        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+          {/* Bio */}
+          <AnimatedSection
+            className="lg:col-span-3 flex flex-col gap-6"
+            delay={0.1}
+          >
+            <p className="text-muted leading-relaxed text-base sm:text-lg">
+              Sou um Software Engineer apaixonado por construir soluções
+              digitais de alta qualidade. Com mais de 3 anos de experiência,
+              especialisei-me em desenvolvimento{" "}
+              <span className="text-foreground font-medium">Front-End</span> e
+              na plataforma enterprise{" "}
+              <span className="text-foreground font-medium">
+                Fluig (TOTVS)
+              </span>
+              .
+            </p>
+            <p className="text-muted leading-relaxed text-base sm:text-lg">
+              Tenho forte proficiência em{" "}
+              <span className="text-foreground font-medium">
+                React, Next.js e TypeScript
+              </span>
+              , com experiência em criar sistemas que combinam performance,
+              acessibilidade e excelente experiência do usuário.
+            </p>
+            <p className="text-muted leading-relaxed text-base sm:text-lg">
+              Minha trajetória abrange desde startups de fintech até grandes
+              instituições de ensino, sempre focado em entregar código limpo e
+              interfaces que fazem a diferença.
+            </p>
+
+            <div className="flex flex-wrap gap-4 pt-2">
+              <span className="inline-flex items-center gap-2 text-muted text-sm">
+                <FiMapPin
+                  className="w-4 h-4 text-accent"
+                  aria-hidden="true"
+                />
+                {personal.location}
+              </span>
+              <a
+                href={`mailto:${personal.email}`}
+                className="inline-flex items-center gap-2 text-muted text-sm hover:text-foreground transition-colors"
+              >
+                <FiMail
+                  className="w-4 h-4 text-accent"
+                  aria-hidden="true"
+                />
+                {personal.email}
+              </a>
             </div>
-            <div className={styles.stats}>
-              <div className={styles.stat}>
-                <div className={styles.statNumber}>5+</div>
-                <div className={styles.statLabel}>Anos de experiência</div>
+          </AnimatedSection>
+
+          {/* Stats */}
+          <AnimatedSection
+            className="lg:col-span-2 grid grid-cols-2 gap-4"
+            delay={0.2}
+          >
+            {stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="glass glass-hover rounded-2xl p-6 flex flex-col gap-1"
+              >
+                <span className="text-3xl sm:text-4xl font-black gradient-text">
+                  {stat.value}
+                </span>
+                <span className="text-muted text-xs sm:text-sm leading-tight">
+                  {stat.label}
+                </span>
               </div>
-              <div className={styles.stat}>
-                <div className={styles.statNumber}>50+</div>
-                <div className={styles.statLabel}>Projetos entregues</div>
-              </div>
-              <div className={styles.stat}>
-                <div className={styles.statNumber}>10+</div>
-                <div className={styles.statLabel}>Tecnologias</div>
-              </div>
-            </div>
-          </div>
+            ))}
+          </AnimatedSection>
         </div>
-      </Container>
-    </Section>
+      </div>
+    </section>
   );
 }
